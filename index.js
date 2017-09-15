@@ -5,6 +5,11 @@ const Jimp = require("jimp");
 
 console.log("Host on Http://localhost:9595")
 
+
+app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+"/readme.html"))
+})
+
 app.get('/img/:imgID/text/:addText', function (req, res) {
     var fileName = '鸚鵡兄弟.png',
         text = req.params.addText,
