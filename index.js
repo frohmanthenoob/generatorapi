@@ -34,4 +34,4 @@ app.get('/img/:imgID/text/:addText', function (req, res) {
         res.send(error)
     })
 })
-app.listen(9595)
+app.listen(process.env.PORT || 5000)
